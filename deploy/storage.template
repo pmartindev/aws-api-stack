@@ -1,0 +1,19 @@
+{
+"AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "The storage for the Automation for the People API.",
+    "Parameters": {
+        "S3Bucket": {
+            "Type": "String",
+            "Description": "The CloudFormation Stack for running the bucket used for storing the Lambda function for the Automation for the People API.",
+            "Default": "automationforthepeoplepmartin"
+        }
+    },
+    "Resources": {
+        "s3Bucket": {
+            "Type": "AWS::S3::Bucket",
+            "Properties": {
+              "BucketName":  {"Ref": "S3Bucket"}
+            }
+          }
+    }
+}

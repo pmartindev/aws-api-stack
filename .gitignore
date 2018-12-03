@@ -1,0 +1,6 @@
+.VSCODE
+KEYS
+*.zip
+params.json
+__pycache__
+.DS_Store
