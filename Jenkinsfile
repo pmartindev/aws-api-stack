@@ -9,6 +9,7 @@ pipeline {
         stage("Deploy CloudFormation Stack") {
             steps {
                 echo 'Deploy CFT'
+                sh 'ls'
             }
         }
     }  
