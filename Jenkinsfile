@@ -2,17 +2,19 @@ pipeline {
     agent none
     stages {
         stage("Run Unit Tests") {
-
+            steps {
+                echo 'Run Unit Tests'
+            }
         }
         stage("Deploy CloudFormation Stack") {
             steps {
-                sh ''
+                echo 'Deploy CFT'
             }
         }
     }  
     post {
         always {
-            sh
+            echo 'Delete Stack'
         }
     }
 }
